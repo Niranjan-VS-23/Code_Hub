@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .intro-mission {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+
+        .intro-mission h1, .intro-mission h2 {
+            color: #333;
+        }
+
+        .highlight {
+            background-color: #007bff;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .intro-mission img {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .intro-mission ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .intro-mission ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .intro-mission ul li:before {
+            content: '•';
+            color: #007bff;
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+        }
+
+        .back-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+        </style>
+</head>
+    <body>
+<div class="intro-mission" id="introMission">
+    <h1>Welcome to <span class="highlight">Code Hub</span></h1>
+    <img src="download (1).png" alt="Code Hub Welcome Image" style="max-width:100%;height:auto;">
+    <p>Your premier destination for unlocking the world of coding and software development. At <span class="highlight">Code Hub</span>, we believe in empowering individuals with the knowledge and skills needed to thrive in the digital age. Whether you're a complete beginner looking to get your feet wet in coding, an intermediate coder aiming to sharpen your skills, or an experienced developer seeking to expand your expertise into new technologies, Code Hub offers a diverse range of courses designed to meet your learning needs.</p>
+    
+    <p>Our platform is built on the foundation of accessibility, ensuring that high-quality coding education is available to anyone, anywhere, at any time. With Code Hub, you embark on a journey of learning that is engaging, interactive, and, most importantly, tailored to the real-world applications of programming.</p>
+    
+    <h2>Our Mission</h2>
+    <p><strong>Empowering Learners to Code the Future:</strong> At Code Hub, our mission is to democratize coding education, making it accessible and affordable for learners across the globe. We are committed to:</p>
+    
+    <ul>
+        <li><strong>Fostering a Community of Coders:</strong> Creating an inclusive, supportive environment where learners can connect, collaborate, and grow together.</li>
+        <li><strong>Innovation in Learning:</strong> Leveraging cutting-edge technology to provide interactive, immersive learning experiences that are both effective and enjoyable.</li>
+        <li><strong>Real-World Application:</strong> Offering a curriculum that is directly tied to the demands of the job market, ensuring our learners are not just learning to code, but are prepared to tackle real-world challenges.</li>
+        <li><strong>Lifelong Learning:</strong> Supporting our learners at every stage of their coding journey, from beginners to seasoned developers, with resources that cater to every level of expertise.</li>
+    </ul>
+    
+    <p>Join us at <span class="highlight">Code Hub</span>, where coding meets community, learning meets innovation, and where your journey into the digital future begins.</p></div>
+</div>
+<button onclick="window.history.back()" class="back-button">Back</button>
+
+<script>
+    // JavaScript to toggle the intro section on "Home" link click
+    document.getElementById('homeLink').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor action
+        var introSection = document.getElementById('introMission');
+        introSection.style.display = introSection.style.display === 'block' ? 'none' : 'block'; // Toggle display
+    });
+</script>
+
+
+</body>
+</html>
