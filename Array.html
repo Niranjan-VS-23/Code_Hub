@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .Array {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #005A87;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #eee;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #0a0005;
+            font-size: 20px;
+
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        video {
+            display: block;
+            margin: 0 auto; /* Center the video */
+        }
+
+
+        .back-button {
+            position: fixed; 
+            right: 20px; 
+            bottom: 20px; 
+            background-color: #6c757d; 
+            color: white; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            text-align: center; 
+        }
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="Array">
+        <h1>Arrays</h1>
+        <p>An array is a collection of similar types of data. For example, if we want to store the names of 100 people then we can create an array of the string type that can store 100 names.</p>  
+        <p>String[] array = new String[100];</p>
+        <h2>How to declare an array in Java?</h2>
+        <p>In Java, here is how we can declare an array.</p>
+        <p>dataType[] arrayName;</p>
+        <ul>
+            <li>dataType - it can be primitive data types like int, char, double, byte, etc. or Java objects</li>
+            <li>arrayName - it is an identifier</li>
+        </ul>
+        <p>For example,</p>
+        <p>double[] data;</p>
+        <p>Here, data is an array that can hold values of type double.</p>
+            
+        <p>In Java, we can declare and allocate the memory of an array in one single statement. For example,</p>
+        <p>double[] data = new double[10];</p>
+        <h1>Example: Access Array Elements</h1>
+        <pre>
+            <code>
+                class Main {
+                    public static void main(String[] args) {
+                     
+                      // create an array
+                      int[] age = {12, 4, 5, 2, 5};
+                   
+                      // access each array elements
+                      System.out.println("Accessing Elements of Array:");
+                      System.out.println("First Element: " + age[0]);
+                      System.out.println("Second Element: " + age[1]);
+                      System.out.println("Third Element: " + age[2]);
+                      System.out.println("Fourth Element: " + age[3]);
+                      System.out.println("Fifth Element: " + age[4]);
+                    }
+                }
+            </code>
+        </pre>
+        <h2>Lecture Video</h2>
+        <video width="500" height="300" controls autoplay muted>
+            <source src="Array.mp4" type="video/mp4">
+        </video>
+        
+    <p>For more information visit the website</p>
+    <ul>
+    <li>
+        <a href="https://www.geeksforgeeks.org/arrays-in-java/">complete explanation on Arrays</a>
+    </li>
+    </ul>
+    <button onclick="window.history.back()" class="back-button">Back</button>
+
+    </div>
+</body>
+</html>
