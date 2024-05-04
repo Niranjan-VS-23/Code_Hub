@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            color: #005A87;
+            text-align: center;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        li {
+            background-color: #ffffff;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        li:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #333;
+            font-size: 20px;
+        }
+        .back-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <h1>C++ Operators</h1>
+    <p>Operators are symbols that perform operations on variables and values. For example, + is an operator used for addition, while - is an operator used for subtraction.</p>
+    <p>Types of Operators:</p>
+    <ul>
+        <li>Arithmetic Operators</li>
+        <li>Assignment Operators</li>
+        <li>Relational Operators</li>
+        <li>Logical Operators</li>
+        <li>Bitwise Operators</li>
+    </ul>
+
+    <h1>Example 1: Arithmetic Operators</h1>
+    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a, b;
+    a = 7;
+    b = 2;
+
+    // printing the sum of a and b
+    cout << "a + b = " << (a + b) << endl;
+
+    // printing the difference of a and b
+    cout << "a - b = " << (a - b) << endl;
+
+    // printing the product of a and b
+    cout << "a * b = " << (a * b) << endl;
+
+    // printing the division of a by b
+    cout << "a / b = " << (a / b) << endl;
+
+    // printing the modulo of a by b
+    cout << "a % b = " << (a % b) << endl;
+
+    return 0;
+}</code></pre>
+
+    <h2>Lecture Video</h2>
+    <video width="500" height="300" controls autoplay muted>
+        <source src="operator.mp4" type="video/mp4">
+    </video>
+
+    <p>For more information visit the websites:</p>
+    <ol>
+        <li><a href="https://www.geeksforgeeks.org/operators-in-cpp/">Complete explanation on Operators</a></li>
+        <li><a href="https://www.w3schools.com/cpp/cpp_operators.asp">Operators in Brief</a></li>
+    </ol>
+    <button onclick="window.history.back()" class="back-button">Back</button>
+</body>
+</html>

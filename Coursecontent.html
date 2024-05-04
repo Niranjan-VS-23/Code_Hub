@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #005A87;
+            display: block;
+            padding-left: 25px;
+            position: relative;
+        }
+        a:hover {
+            color: #FFD700;
+        }
+        a:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background-color: #005A87;
+        }
+        a:hover:before {
+            background-color: #FFD700;
+        }
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            background-color: #ccc;
+            border: none;
+            color: #666;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #005A87;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover:not(.disabled) {
+            background-color: #003D5C;
+        }
+
+        .back-button {
+    position: fixed; /* Keeps the button in place while scrolling */
+    right: 20px; /* Distance from the right edge of the viewport */
+    bottom: 20px; /* Distance from the bottom edge of the viewport */
+    background-color: #6c757d; /* A greyish color, but you can choose any */
+    color: white;
+    padding: 10px 20px; /* Adjust padding to your liking */
+    font-size: 16px; /* Match your other buttons or adjust */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #5a6268; /* A slightly darker grey for hover effect */
+}
+
+.back-button {
+            position: fixed; 
+            right: 20px; 
+            bottom: 20px; 
+            background-color: #6c757d; 
+            color: white; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            text-align: center; 
+        }
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+<p>Progress: <span id="progressText">0%</span></p>
+<div id="progressBarContainer" style="width: 100%; background-color: #ddd;">
+    <div id="progressBar" style="width: 0%; height: 20px; background-color: #005A87;"></div>
+</div>
+
+<div class="content">
+    <h1>Course Content</h1>
+    <ul>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="Datatypes.html">Datatypes</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="Operators.html">Operators</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="loops.html">Loops</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="Pointers.html">Pointers</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="Functions.html">Functions</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="Function Overloading.html">Function Overloading</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="oops concept.html">oops concept</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="classes and objects.html">classes and objects</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="Constructors.html">Constructors</a></li>
+        <li><input type="checkbox" class="concept" onclick="checkCompletion()"><a href="Destructors.html">Destructors</a></li>
+
+    </ul>
+    <a href="test.html" class="take-test-button" onclick="startTest()">Take Test</a>
+
+    <button id="certificateBtn" class="disabled" onclick="downloadCertificate()">Download Certificate</button>
+
+
+</div>
+<button onclick="goBack()" class="back-button">Back</button>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+<script>
+    function checkCompletion() {
+        const concepts = document.querySelectorAll('.concept');
+        const allChecked = Array.from(concepts).every(concept => concept.checked);
+        
+        const certificateBtn = document.getElementById('certificateBtn');
+        if (allChecked) {
+            certificateBtn.classList.remove('disabled');
+        } else {
+            certificateBtn.classList.add('disabled');
+        }
+    }
+
+    function downloadCertificate() {
+        // Placeholder for download logic
+        alert('Downloading Certificate...');
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', loadProgress);
+
+    function checkCompletion() {
+        const concepts = document.querySelectorAll('.concept');
+        const completedConcepts = Array.from(concepts).filter(concept => concept.checked).length;
+        const totalConcepts = concepts.length;
+        const progressPercent = (completedConcepts / totalConcepts) * 100;
+
+        updateProgress(progressPercent);
+        saveProgress(progressPercent);
+
+        const certificateBtn = document.getElementById('certificateBtn');
+        certificateBtn.classList.toggle('disabled', progressPercent < 100);
+    }
+
+    function updateProgress(progressPercent) {
+        document.getElementById('progressBar').style.width = progressPercent + '%';
+        document.getElementById('progressText').textContent = progressPercent.toFixed(0) + '%';
+    }
+
+    function saveProgress(progressPercent) {
+        localStorage.setItem('courseProgress', progressPercent);
+    }
+
+    function loadProgress() {
+        const savedProgress = localStorage.getItem('courseProgress') || 0;
+        updateProgress(savedProgress);
+        checkCompletion(); // To properly initialize the state of the certificate button.
+    }
+
+    function downloadCertificate() {
+        if (localStorage.getItem('courseProgress') >= 100) {
+            alert('Downloading Certificate...');
+            // Implement certificate download logic here.
+        } else {
+            alert('Complete all videos to unlock the certificate.');
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005A87;
+            color: white;
+            padding: 10px 20px;
+        }
+        .navbar .brand {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: centre;
+        }
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 16px;
+        }
+        .navbar .nav-links a:hover {
+            color: #FFD700;
+            text-shadow: 0px 0px 5px rgba(255,215,0,0.7);
+        }
+        
+        .navbar .nav-links a:hover, .dropdown-content a:hover {
+            color: #f6f5ed;
+            text-shadow: 0px 0px 5px rgba(255,215,0,0.7);
+        }
+
+       .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #160101;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+        }
+    .course-ad {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: auto;
+      margin-left: 20px; 
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex: 1; 
+      min-width: 300px;
+    }
+    .courses-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px; 
+    margin-bottom: 50px;
+    }
+
+    .course-name {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .course-level {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #666;
+    }
+    .course-price {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .course-rating {
+      font-size: 18px;
+      color: #666;
+    }
+    .course-ad:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+  }
+  .popular-now {
+  font-size: 32px; 
+  color: #333;
+  margin-left: 20px; 
+  font-weight: bold; 
+}
+
+.foot-panel1 {
+  margin-top: 50px; 
+}
+.foot-panel2 {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-around; 
+    overflow-x: auto; 
+}
+
+.foot-panel2 ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin-right: 20px; 
+    min-width: 160px; 
+}
+
+.foot-panel2 ul li a {
+    text-decoration: none;
+    color: #000; 
+}
+
+.foot-panel2 ul li {
+    margin-bottom: 8px; 
+}
+
+</style>
+</head>
+<body>
+<div class="navbar">
+    <div class="brand">Code Hub</div>
+    <div class="nav-links">
+        <a href="learning.html">logout</a>
+        <a href="userdetails.php">user details</a>
+
+</div>
+
+</div>
+  <p class="popular-now">Course enrollers details</p>
+
+  <div class="course-ad">
+    <div class="course-name">C++</div>
+    <div class="course-level">Beginner to Advanced</div>
+    <p>1500 RS</p>
+    <!-- Button to enrolldetail.html -->
+    <a href="enrolldetail.php" class="enroll-button">Enroll Details</a>
+</div>
+
+    <div class="course-ad">
+      <div class="course-name">Bootstrap</div>
+      <div class="course-level">Beginner to Advanced</div>
+      <p>1800 RS</p>
+    </div>
+    <div class="course-ad">
+      <div class="course-name">DevOps</div>
+      <div class="course-level">Beginner to Advanced</div>
+      <p>2200 RS</p>
+    </div>
+        <div class="course-ad">
+          <div class="course-name">PHP</div>
+          <div class="course-level">Beginner to Advanced</div>
+          <p>1000 RS</p>
+        </div>
+      
+        <div class="course-ad">
+          <div class="course-name">Java</div>
+          <div class="course-level">Beginner to Advanced</div>
+          <p>1400 RS</p>
+        </div>
+      
+        <div class="course-ad">
+          <div class="course-name">Javascript</div>
+          <div class="course-level">Beginner to Advanced</div>
+          <p>1800 RS</p>
+        </div>
+  </div>
+ 
+</body>
+</html>

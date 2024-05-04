@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub Test</title>
+    <style>
+        .question-container { margin-bottom: 20px; }
+        .question { font-weight: bold; }
+        button.option { 
+            display: block; 
+            margin-top: 5px; 
+            background-color: #f0f0f0; 
+            border: 1px solid #ddd; 
+            padding: 5px;
+            text-align: left;
+        }
+        button.option:disabled {
+            color: #000;
+            cursor: not-allowed;
+        }
+        .back-to-home {
+            margin-top: 40px;
+            text-align: right;
+        }
+
+        .back-to-home a {
+            color: #fff;
+            text-decoration: none;
+            background: #007bff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .back-to-home a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <div class="question-container">
+            <p class="question">Identify the correct extension of the user-defined header file in C++</p>
+            <button class="option" onclick="checkAnswer(this, false)">.txt</button>
+            <button class="option" onclick="checkAnswer(this, false)">.c</button>
+            <button class="option" onclick="checkAnswer(this, true)">.h</button>
+            <button class="option" onclick="checkAnswer(this, false)">.cpp</button>
+        </div>
+        <div class="question-container">
+            <p class="question">Which of the following is “address of operator”?</p>
+            <button class="option" onclick="checkAnswer(this, false)">*</button>
+            <button class="option" onclick="checkAnswer(this, true)">&</button>
+            <button class="option" onclick="checkAnswer(this, false)">%</button>
+            <button class="option" onclick="checkAnswer(this, false)">#</button>
+        </div>
+
+        <div class="question-container">
+            <p class="question">Identify the incorrect constructor type:</p>
+            <button class="option" onclick="checkAnswer(this, false)">Copy constructor</button>
+            <button class="option" onclick="checkAnswer(this, true)">Friend constructor</button>
+            <button class="option" onclick="checkAnswer(this, false)">Default constructor</button>
+            <button class="option" onclick="checkAnswer(this, false)">Parameterized constructor</button>
+        </div>
+
+        <div class="question-container">
+            <p class="question">C++ uses which approach?</p>
+            <button class="option" onclick="checkAnswer(this, false)">Procedural</button>
+            <button class="option" onclick="checkAnswer(this, true)">Object-Oriented</button>
+            <button class="option" onclick="checkAnswer(this, false)">Functional</button>
+            <button class="option" onclick="checkAnswer(this, false)">Both Procedural and Object-Oriented</button>
+        </div>
+
+
+        <div class="question-container">
+            <p class="question">Which of the following data type is supported in C++ but not in C?</p>
+            <button class="option" onclick="checkAnswer(this, true)">bool</button>
+            <button class="option" onclick="checkAnswer(this, false)">int</button>
+            <button class="option" onclick="checkAnswer(this, false)">float</button>
+            <button class="option" onclick="checkAnswer(this, false)">double</button>
+        </div>
+
+        <div class="question-container">
+            <p class="question">C++ uses which approach?</p>
+            <button class="option" onclick="checkAnswer(this, false)">Procedural</button>
+            <button class="option" onclick="checkAnswer(this, false)">Functional</button>
+            <button class="option" onclick="checkAnswer(this, true)">Object-Oriented</button>
+            <button class="option" onclick="checkAnswer(this, false)">Both Procedural and Object-Oriented</button>
+        </div>
+
+        <div class="question-container">
+            <p class="question">Which of the following data type is supported in C++ but not in C?</p>
+            <button class="option" onclick="checkAnswer(this, true)">bool</button>
+            <button class="option" onclick="checkAnswer(this, false)">int</button>
+            <button class="option" onclick="checkAnswer(this, false)">float</button>
+            <button class="option" onclick="checkAnswer(this, false)">char</button>
+        </div>
+
+        <p class="question">Identify the correct syntax for declaring arrays in C++.</p>
+        <button class="option" onclick="checkAnswer(this, true)">int arr[10];</button>
+        <button class="option" onclick="checkAnswer(this, false)">int arr ;</button>
+        <button class="option" onclick="checkAnswer(this, false)">array<int> arr[10];</button>
+        <button class="option" onclick="checkAnswer(this, false)">int[10] arr;</button>
+    </div>
+    </div>
+    <p>Score: <span id="score">0</span>/8</p>
+    <button onclick="window.history.back()" class="back-button">Back</button>
+
+    <script>
+        let score = 0;
+
+        function checkAnswer(button, isCorrect) {
+            // Change button background color based on correctness
+            if (isCorrect) {
+                button.style.backgroundColor = "lightgreen";
+                score++;
+            } else {
+                button.style.backgroundColor = "salmon";
+            }
+            document.getElementById('score').innerText = score;
+            
+            // Disable all sibling buttons
+            let siblings = button.parentNode.querySelectorAll('.option');
+            siblings.forEach(sib => {
+                sib.disabled = true;
+                // Optionally fade out incorrect answers slightly for visual clarity
+                if (sib !== button && !isCorrect) {
+                    sib.style.opacity = "0.6";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll in C++ Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1, h2, .success-message {
+            color: #005A87;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="button"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="button"],
+        .continue-reading {
+            background-color: #005A87;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="button"]:hover,
+        .continue-reading:hover {
+            background-color: #003D5C;
+        }
+        .terms {
+            margin: 20px 0;
+        }
+        .success-message {
+            display: none;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .enroll-now-button {
+    background-color: #007BFF; /* A different shade of blue */
+    color: white;
+    padding: 12px 20px; /* Slightly larger padding */
+    font-weight: bold; /* Make text bold */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.enroll-now-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.back-button {
+    position: fixed; /* Keeps the button in place while scrolling */
+    right: 20px; /* Distance from the right edge of the viewport */
+    bottom: 20px; /* Distance from the bottom edge of the viewport */
+    background-color: #6c757d; /* A greyish color, but you can choose any */
+    color: white;
+    padding: 10px 20px; /* Adjust padding to your liking */
+    font-size: 16px; /* Match your other buttons or adjust */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+.back-button:hover {
+    background-color: #5a6268; /* A slightly darker grey for hover effect */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enroll in C++ Programming Course</h1>
+        <form id="enrollmentForm" method="post" action="enroll.php">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <h2>Payment Information</h2>
+            <p>Payable amount is 1200 RS</p>
+    
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+    
+            <div id="cardInfo">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+    
+                <label for="expiration">Expiration Date:</label>
+                <input type="text" id="expiration" name="expiration" placeholder="MM/YYYY" required>
+    
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a>.</label>
+            </div>
+            <button onclick="window.history.back()" class="back-button">Back</button>
+
+            <input type="submit" value="Enroll Now" class="enroll-now-button">
+            <a href="Coursecontent.html" class="continue-reading">Continue Reading</a>
+        </form>
+    </div>
+    <button onclick="window.history.back()" class="back-button">Back</button>
+
+    <script>document.getElementById('enrollmentForm').onsubmit = function() {
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var cardNumber = document.getElementById('cardNumber').value.trim();
+        var expiration = document.getElementById('expiration').value.trim();
+        var cvv = document.getElementById('cvv').value.trim();
+        var paymentMethod = document.getElementById('paymentMethod').value;
+        var termsChecked = document.getElementById('terms').checked;
+    
+        if (!name || !email || !cardNumber || !expiration || !cvv || !paymentMethod || !termsChecked) {
+            alert('Please fill all the fields and agree to the terms.');
+            return false; // Prevent form from submitting
+        }
+        return true; 
+
+    };
+    </script>
+
+    </body>
+    </html>

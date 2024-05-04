@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .Inheritance {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #005A87;
+        }
+        p, li, pre {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #eee;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        video {
+            display: block;
+            margin: 0 auto; /* Center the video */
+        }
+     /*    ul {
+            list-style-type: none; /* Remove default list style 
+        }
+        li {
+            margin-bottom: 5px;
+        } */
+
+
+        .back-button {
+            position: fixed; 
+            right: 20px; 
+            bottom: 20px; 
+            background-color: #6c757d; 
+            color: white; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            text-align: center; 
+        }
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="Inheritance">
+        <h1>Inheritance</h1>
+        <p>Inheritance is one of the key features of OOP that allows us to create a new class from an existing class.</p>
+        <p>The new class that is created is known as subclass (child or derived class) and the existing class from
+        where the child class is derived is known as superclass (parent or base class).</p>
+        <p>The extends keyword is used to perform inheritance in Java.</p>
+        <h1>Example 1: Java Inheritance</h1>
+        <pre>
+            <code>
+                class Animal {
+
+                    // field and method of the parent class
+                    String name;
+                    public void eat() {
+                      System.out.println("I can eat");
+                    }
+                  }
+                  
+                  // inherit from Animal
+                  class Dog extends Animal {
+                  
+                    // new method in subclass
+                    public void display() {
+                      System.out.println("My name is " + name);
+                    }
+                  }
+                  
+                  class Main {
+                    public static void main(String[] args) {
+                  
+                      // create an object of the subclass
+                      Dog labrador = new Dog();
+                  
+                      // access field of superclass
+                      labrador.name = "Rohu";
+                      labrador.display();
+                  
+                      // call method of superclass
+                      // using object of subclass
+                      labrador.eat();
+                  
+                    }
+                  }
+            </code>
+        </pre>
+        <h2>Lecture Video</h2>
+        <video width="500" height="300" controls autoplay muted>
+            <source src="Inheritance.mp4" type="video/mp4">
+        </video>
+        
+        <p>For more information visit the website</p>
+        <ul>
+            <li>
+                <a href="https://www.geeksforgeeks.org/inheritance-in-java/">complete explanation on Inheritance</a>
+            </li>
+        </ul>
+    </div>
+    <button onclick="window.history.back()" class="back-button">Back</button>
+
+</body>
+</html>

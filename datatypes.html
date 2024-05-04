@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .datatype {
+            background-color: #ffffff;
+            margin: 20px auto;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        h1 {
+            color: #005A87;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            color: #333;
+            font-size: 20px;
+        }
+        .back-button {
+    position: fixed; /* Keeps the button in place while scrolling */
+    right: 20px; /* Distance from the right edge of the viewport */
+    bottom: 20px; /* Distance from the bottom edge of the viewport */
+    background-color: #6c757d; /* A greyish color, but you can choose any */
+    color: white;
+    padding: 10px 20px; /* Adjust padding to your liking */
+    font-size: 16px; /* Match your other buttons or adjust */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #5a6268; /* A slightly darker grey for hover effect */
+}
+    </style>
+</head>
+<body>
+    <div class="datatype">
+        <h1>C++ Datatypes</h1>
+        <p>All variables use data type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data they can store. Whenever a variable is defined in C++, the compiler allocates some memory for that variable based on the data type with which it is declared. Every data type requires a different amount of memory. 
+            C++ supports a wide variety of data types and the programmer can select the data type appropriate to the needs of the application. Data types specify the size and types of values to be stored. However, storage representation and machine instructions to manipulate each data type differ from machine to machine, although C++ instructions are identical on all machines.</p>
+            <h2>C++ Program Example</h2>
+            <pre><code>// C++ Program to Demonstrate the correct size
+    // of various data types on your computer.
+    #include &lt;iostream&gt;
+    using namespace std;
+    
+    int main()
+    {
+        cout &lt;&lt; "Size of char : " &lt;&lt; sizeof(char) &lt;&lt; " bytes" &lt;&lt; endl;
+        cout &lt;&lt; "Size of int : " &lt;&lt; sizeof(int) &lt;&lt; " bytes" &lt;&lt; endl;
+        cout &lt;&lt; "Size of long : " &lt;&lt; sizeof(long) &lt;&lt; " bytes" &lt;&lt; endl;
+        cout &lt;&lt; "Size of float : " &lt;&lt; sizeof(float) &lt;&lt; " bytes" &lt;&lt; endl;
+        cout &lt;&lt; "Size of double : " &lt;&lt; sizeof(double) &lt;&lt; " bytes" &lt;&lt; endl;
+    
+        return 0;
+    }</code></pre>
+    <h2>Lecture Video</h2>
+    <video width="500" height="300" controls autoplay muted>
+        <source src="datatype.mp4" type="video/mp4">
+    </video>
+    
+    <p>For more information visit the website</p>
+    <ul>
+        <li><a href="https://www.geeksforgeeks.org/cpp-data-types/">Complete explanation on C++ datatypes</a></li>
+        <button onclick="window.history.back()" class="back-button">Back</button>
+
+    </ul>    
+    <button onclick="window.history.back()" class="back-button">Back</button>
+
+    </div>
+</body>
+</html>
